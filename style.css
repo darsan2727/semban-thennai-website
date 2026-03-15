@@ -21,9 +21,21 @@ font-weight:bold;
 }
 
 .hero{
+background:url('coconut.jpg');
+background-size:cover;
+background-position:center;
+height:400px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
 text-align:center;
-padding:80px;
-background:#e8f5e9;
+}
+
+.hero-text{
+background:rgba(0,0,0,0.5);
+padding:30px;
+border-radius:10px;
 }
 
 .order-btn{
