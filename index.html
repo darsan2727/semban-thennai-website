@@ -8,11 +8,139 @@
 
 <title>Semban Thennai | Coconut Farm Krishnagiri</title>
 
-<meta name="description" content="Buy fresh coconuts, coconut saplings and pure coconut oil directly from Semban Thennai Coconut Farm in Krishnagiri. Order through WhatsApp.">
-
-<meta name="keywords" content="coconut farm krishnagiri, fresh coconuts tamilnadu, coconut saplings, coconut oil farm">
+<meta name="description" content="Fresh coconuts, coconut saplings and pure coconut oil from Semban Thennai Coconut Farm in Krishnagiri.">
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+/* HERO LANDING PAGE */
+
+.hero{
+height:500px;
+background:url("coconut.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+bottom:0;
+background:rgba(0,0,0,0.55);
+}
+
+.hero-text{
+position:relative;
+z-index:2;
+max-width:700px;
+}
+
+.hero h2{
+font-size:42px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:20px;
+}
+
+/* ANIMATED PRODUCT CARDS */
+
+.product{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:transform 0.4s, box-shadow 0.4s;
+}
+
+.product:hover{
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+.product img{
+width:100%;
+border-radius:10px;
+}
+
+/* GALLERY SLIDER */
+
+.slider{
+max-width:900px;
+margin:auto;
+}
+
+.slide{
+display:none;
+}
+
+.slide img{
+width:100%;
+border-radius:10px;
+}
+
+/* INSTAGRAM GRID */
+
+.instagram-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.instagram-grid img{
+width:100%;
+border-radius:10px;
+}
+
+/* ORDER FORM */
+
+form input, form textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+/* FOOTER */
+
+footer{
+background:#1b5e20;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+footer a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+}
+
+/* BUTTON */
+
+.order-btn{
+background:#25D366;
+padding:12px 25px;
+color:white;
+border-radius:6px;
+text-decoration:none;
+display:inline-block;
+}
+
+</style>
 
 </head>
 
@@ -25,13 +153,16 @@
 <nav>
 <a href="#">Home</a>
 <a href="#products">Products</a>
-<a href="#gallery">Farm</a>
+<a href="#farm">Farm</a>
 <a href="#instagram">Instagram</a>
+<a href="#order">Order</a>
 <a href="#contact">Contact</a>
 </nav>
 
 </header>
 
+
+<!-- HERO LANDING -->
 
 <section class="hero">
 
@@ -39,9 +170,9 @@
 
 <h2>Fresh Coconut Products From Our Farm</h2>
 
-<p>Coconuts | Coconut Saplings | Pure Coconut Oil</p>
+<p>Premium Coconuts • Coconut Saplings • Pure Coconut Oil</p>
 
-<a class="order-btn" href="https://wa.me/919842817277">
+<a href="https://wa.me/919842817277" class="order-btn">
 Order on WhatsApp
 </a>
 
@@ -49,6 +180,8 @@ Order on WhatsApp
 
 </section>
 
+
+<!-- PRODUCTS -->
 
 <section id="products">
 
@@ -59,7 +192,7 @@ Order on WhatsApp
 <div class="product">
 <img src="coconut.jpg">
 <h3>Fresh Coconuts</h3>
-<p>Fresh farm harvested coconuts.</p>
+<p>Fresh coconuts directly harvested from our farm.</p>
 </div>
 
 <div class="product">
@@ -79,11 +212,38 @@ Order on WhatsApp
 </section>
 
 
-<section id="gallery">
+<!-- FARM GALLERY -->
+
+<section id="farm">
 
 <h2>Our Farm</h2>
 
-<div class="gallery">
+<div class="slider">
+
+<div class="slide">
+<img src="coconut.jpg">
+</div>
+
+<div class="slide">
+<img src="sapling.jpg">
+</div>
+
+<div class="slide">
+<img src="oil.jpg">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INSTAGRAM -->
+
+<section id="instagram">
+
+<h2>Farm Updates</h2>
+
+<div class="instagram-grid">
 
 <img src="coconut.jpg">
 <img src="sapling.jpg">
@@ -91,21 +251,20 @@ Order on WhatsApp
 
 </div>
 
-</section>
+<br>
 
+<a href="https://www.instagram.com/semban_thennai"
+target="_blank"
+class="order-btn">
 
-<section id="instagram">
+Follow on Instagram
 
-<h2>Follow Our Instagram</h2>
-
-<p>See latest updates from our farm.</p>
-
-<a class="order-btn" href="https://www.instagram.com/semban_thennai" target="_blank">
-Visit Instagram Page
 </a>
 
 </section>
 
+
+<!-- ORDER FORM -->
 
 <section id="order">
 
@@ -115,13 +274,13 @@ Visit Instagram Page
 
 <input type="text" id="name" placeholder="Your Name" required>
 
-<input type="text" id="product" placeholder="Product (Coconut / Sapling / Oil)" required>
+<input type="text" id="product" placeholder="Product" required>
 
 <input type="number" id="quantity" placeholder="Quantity" required>
 
 <textarea id="address" placeholder="Delivery Address"></textarea>
 
-<button type="submit" class="order-btn">
+<button class="order-btn">
 Send Order on WhatsApp
 </button>
 
@@ -129,6 +288,8 @@ Send Order on WhatsApp
 
 </section>
 
+
+<!-- CONTACT -->
 
 <section id="contact">
 
@@ -138,7 +299,7 @@ Send Order on WhatsApp
 
 <p><strong>Location:</strong> Krishnagiri, Tamil Nadu</p>
 
-<p><strong>Phone / WhatsApp:</strong> 9842817277</p>
+<p><strong>WhatsApp:</strong> 9842817277</p>
 
 <h3>Farm Location</h3>
 
@@ -151,8 +312,12 @@ style="border:0;">
 
 <br><br>
 
-<a href="https://maps.app.goo.gl/HEqM8qpzy6wH3nYk9" target="_blank" class="order-btn">
+<a href="https://maps.app.goo.gl/HEqM8qpzy6wH3nYk9"
+target="_blank"
+class="order-btn">
+
 Open in Google Maps
+
 </a>
 
 </section>
@@ -161,6 +326,11 @@ Open in Google Maps
 <footer>
 
 <p>© 2026 Semban Thennai Coconut Farm</p>
+
+<p>
+<a href="https://www.instagram.com/semban_thennai">Instagram</a>
+<a href="https://wa.me/919842817277">WhatsApp</a>
+</p>
 
 </footer>
 
@@ -172,6 +342,8 @@ Open in Google Maps
 
 <script>
 
+/* WHATSAPP ORDER */
+
 function sendOrder(){
 
 let name=document.getElementById("name").value;
@@ -179,14 +351,38 @@ let product=document.getElementById("product").value;
 let quantity=document.getElementById("quantity").value;
 let address=document.getElementById("address").value;
 
-let message="New Order:%0AName: "+name+"%0AProduct: "+product+"%0AQuantity: "+quantity+"%0AAddress: "+address;
+let msg="New Order:%0AName:"+name+"%0AProduct:"+product+"%0AQuantity:"+quantity+"%0AAddress:"+address;
 
-window.open("https://wa.me/919842817277?text="+message);
+window.open("https://wa.me/919842817277?text="+msg);
 
 }
+
+/* GALLERY SLIDER */
+
+let slideIndex=0;
+
+function showSlides(){
+
+let slides=document.getElementsByClassName("slide");
+
+for(let i=0;i<slides.length;i++){
+slides[i].style.display="none";
+}
+
+slideIndex++;
+
+if(slideIndex>slides.length)
+slideIndex=1;
+
+slides[slideIndex-1].style.display="block";
+
+setTimeout(showSlides,3000);
+
+}
+
+showSlides();
 
 </script>
 
 </body>
-
 </html>
