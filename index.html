@@ -1,54 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Semban Thennai</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Semban Thennai</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav class="navbar">
-  <div class="logo">🌴 Semban Thennai</div>
+  <div class="logo">
+    <img src="logo.png" alt="logo">
+  </div>
+
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="products.html">Products</a></li>
-    <li><a href="about.html">About</a></li>
+    <li><a href="about.html">Farm</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
+
+  <button onclick="toggleDarkMode()" class="dark-btn">🌙</button>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Premium Coconut Products</h1>
-  <p>Fresh • Organic • Direct from Farm</p>
+  <h1>Pure Coconut. Naturally Grown.</h1>
+  <p>From our farm to your hands</p>
 </section>
 
-<section class="why">
-  <h2>Why Choose Us</h2>
-  <div class="why-grid">
-    <div>🌿 Farm Fresh</div>
-    <div>🚚 Fast Delivery</div>
-    <div>💯 Trusted Quality</div>
-  </div>
+<!-- PRODUCTS -->
+<section class="products-preview">
+  <h2>Products</h2>
+  <div id="product-container" class="grid"></div>
 </section>
 
-<section class="products">
-  <h2>Our Products</h2>
-  <div id="product-container" class="product-grid"></div>
-</section>
-
-<section class="instagram">
-  <h2>Follow Us on Instagram</h2>
-  <p>@yourusername</p>
-  <a href="https://instagram.com/yourusername" class="btn">Visit Instagram</a>
+<!-- BRAND -->
+<section class="brand">
+  <h2>Rooted in Nature</h2>
+  <p>We grow coconuts with care, sustainability, and tradition.</p>
 </section>
 
 <a href="https://wa.me/919842817277" class="whatsapp">💬</a>
-<a href="https://instagram.com/yourusername" class="instagram-float">📸</a>
-
-<footer>
-  <p>© 2026 Semban Thennai</p>
-</footer>
 
 <script src="script.js"></script>
 
